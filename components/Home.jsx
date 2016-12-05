@@ -1,11 +1,10 @@
 import React from 'react';
-import authentication from '../services/authentication.js'
 
 class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="container">
         <h1>Home...</h1>
       </div>
     )

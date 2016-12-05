@@ -13,16 +13,16 @@ const authentication = {
 
 	register (email, password, password_confirmation, cb) {
 		const newUser = user.addUser(email, password, password_confirmation);
-		console.log(newUser);
 		this.handleAuth(newUser, cb);
-		console.log(newUser);
 	},
 
 	login (email, password, cb) {
-		console.log(email);
 		const logUser = user.findByEmail(email, password);
-		console.log(logUser);
 		this.handleAuth(logUser, cb);
+	},
+
+	logout () {
+		localStorage.removeItem('token');
 	},
 
 	handleAuth (promise, cb) {
